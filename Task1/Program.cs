@@ -13,8 +13,25 @@ ChangeToOpposite(array);
 
 WriteLine($"[{String.Join(" | ", array)}]");
 
+Write("Введите число для поиска: ");
+int look_up = int.Parse(ReadLine()!);
+
+bool resultLook_Up = LookUp(array, look_up);
+WriteLine($"{resultLook_Up}");
 
 
+
+bool LookUp (int [] arr, int lookup)
+{
+    foreach (var element in array)
+    {
+        if (element == lookup)
+        {
+            return true;
+        }
+    }
+    return false;
+}
 
 
 void ChangeToOpposite(int[] array)
